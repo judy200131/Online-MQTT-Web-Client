@@ -1,0 +1,33 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-image: url(img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    margin-top: 40px;
+    font-size: 100px;
+    color:white;
+}
+h5{
+    text-align: center;
+}
+.row{
+    margin-top:100px;
+    margin-left:100px;
+    margin-right:100px;
+}
+.card{
+    border:3px solid  rgb(38, 218, 250);
+    box-shadow: 5px 8px 8px 10px #1de5f3;
+    padding:20px;
+}
+
+
+.table tr{
+    background-color: white;
+}
+.card-header{
+    text-align:center;
+    background-color:rgb(148, 166, 180);
+}

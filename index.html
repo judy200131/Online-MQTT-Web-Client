@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>Activity 4</title>
+</head>
+<body>
+    
+        <!-- <h1>MQTT</h1>
+        <p>My MQTT Web App Deployed through GitHub Pages</p>
+        Broker: <input id="broker" value="wss://test.mosquitto.org:8081/mqtt">
+        <br>
+        <button id="connect" onclick="connectFunc()">Connect</button>
+        <br>
+        <br>
+        Topic: <input id="pub-topic" value="cloud">
+        <br>
+        Payload: <input id="pub-payload" value="strife">
+        <br>
+        <button id="publish" onclick="publishFunc()">Publish</button>
+        <br>
+        <br>
+        Topic: <input id="sub-topic" value="cloud">
+        <br>
+        <button id="subscribe" onclick="subscribeFunc()">Subscribe</button>
+       -->
+       <h1 class="text-center">Online MQTT Web Client</h1>
+       <div class="row">
+        <div class="col-sm-4">
+          <div class="card"> 
+            <div class="card-body">
+              <h5 class="card-header">Broker</h5><br>
+              Broker: <input id="broker" value="wss://mqtt.eclipseprojects.io:443/mqtt"><br><br>
+              <label>Status: </label>
+              <input type="text"value="press connect" disable id="status"><br><br>
+              <center><button id="connect" class="btn-primary" onclick="connectFunc()">Connect</button></center>
+            </div>
+          </div><br><br>
+          <table class="table">
+            <div class="card-header  mt-3">Incoming Messages</div>
+            <thead>
+              <tr>
+                <th scope="col">Topic </th>
+                <th scope="col">Payload </th>
+                <th scope="col">Time Stamp</th>
+               
+              </tr>
+            </thead>
+            <tbody id="incoming">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-header">Publish</h5><br>
+              Topic: <input id="pub-topic" value="cloud"><br><br>
+              Payload: <input id="pub-payload" value="strife"><br><br>
+              <center><button  class="btn-primary" onclick="publishFunc()">Publish</button></center>
+            </div>
+          </div><br><br>
+          <table class="table">
+            <div class="card-header  mt-3">Publish</div>
+            <thead>
+              <tr>
+                <th scope="col">Topic </th>
+                <th scope="col">Payload </th>
+                <th scope="col">Time Stamp</th>
+               
+              </tr>
+            </thead>
+            <tbody id="publish">
+              
+            </tbody>
+          </table>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-header">Subscribe</h5><br>
+                Topic: <input id="sub-topic" value="cloud"><br><br>
+                <center><button id="sub" class="btn-primary" onclick="subscribeFunc()">Subscribe</button></center>
+              </div>
+            </div><br><br>
+            <table class="table">
+                <div class="card-header  mt-3">Subscribe</div>
+                <thead>
+                  <tr>
+                    <th scope="col">Topic </th>
+                   
+                    <th scope="col">Time Stamp</th>
+                   
+                  </tr>
+                </thead>
+                <tbody id="subscribe">
+                  
+                </tbody>
+              </table>
+          </div>
+      </div>
+    <script src="browserMqtt.js"></script>
+    <script src="controller.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+</body>
+</html>
